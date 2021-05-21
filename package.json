@@ -1,0 +1,28 @@
+{
+  "name": "loanmanagement-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "proxy": "http://localhost:3001",
+  "engines": {
+    "node": "15.11.0",
+    "npm": "7.9.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix loanmanagement && npm run build --prefix loanmanagement"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.10",
+    "netlify-lambda": "^2.0.7",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "serve": "^11.3.2"
+  }
+}
