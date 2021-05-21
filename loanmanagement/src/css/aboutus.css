@@ -1,0 +1,14 @@
+@media (max-width: 1200px) {
+  .aboutus {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .aboutImage {
+    width: 90%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,221 @@
+.mainImage {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0%, 100% 75%, 0% 100%);
+  width: 100%;
+  height: 550px;
+  z-index: -100;
+}
+
+body {
+  margin: 0;
+  font-family: Candara;
+  background-color: black;
+}
+
+h2 {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+#nav-toggler,
+.nav-toggler-label {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 0 0 0 auto;
+}
+
+.nav-link,
+.nav-link:visited {
+  display: block;
+  padding: 10px;
+  text-transform: uppercase;
+  transition: 250ms all ease;
+}
+
+@media (hover: hover) {
+  .nav-link:hover,
+  .nav-link:active {
+    color: gray;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-list {
+    flex-basis: 100%;
+    margin-top: 10px;
+    justify-content: space-around;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: 250ms all ease;
+  }
+
+  .nav-toggler-label {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+  }
+
+  .nav-toggler-label span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-top: 2px solid #666;
+    width: 100%;
+    transition: 550ms all ease;
+  }
+
+  .nav-toggler-label span:first-of-type {
+    transform: translate3d(-50%, calc(-50% - 8px), 0);
+  }
+
+  .nav-toggler-label span:nth-of-type(2) {
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .nav-toggler-label span:nth-of-type(3) {
+    transform: translate3d(-50%, calc(-50% + 8px), 0);
+  }
+
+  #nav-toggler:checked + label span:first-of-type {
+    transform: translate3d(-50%, 0, 0) rotate(45deg);
+  }
+
+  #nav-toggler:checked + label span:nth-of-type(3) {
+    transform: translate3d(-50%, 0, 0) rotate(-45deg);
+  }
+
+  #nav-toggler:checked + label span:nth-of-type(2) {
+    width: 1px;
+  }
+
+  #nav-toggler:checked + label + .nav-list {
+    max-height: 300px;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .nav-list {
+    flex-flow: column wrap;
+  }
+
+  .nav-list-item {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+h2 {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+h2:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #fff;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+h2:hover:after {
+  width: 100%;
+  left: 0;
+}
+.RestContent {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.textFieldColor {
+  color: white !important;
+  background-color: white !important;
+}
+[title="Monthly Installments"] {
+  color: white !important;
+}
+[title="Type"] {
+  color: white !important;
+}
+[title="Contact"] {
+  color: white !important;
+}
+[title="Loan end date"] {
+  color: white !important;
+}
+
+[title="Loan start date"] {
+  color: white !important;
+}
+
+[title="Loan Amount"] {
+  color: white !important;
+}
+
+[title="Email"] {
+  color: white !important;
+}
+
+[title="Address"] {
+  color: white !important;
+}
+
+[title="Name"] {
+  color: white !important;
+}
+[title="a"] {
+  color: white !important;
+}
+.ant-radio-wrapper {
+  color: white;
+}
+
+.ant-table .ant-table-cell {
+  background-color: black !important;
+  color: white;
+  border-color: white !important;
+}
+
+.ant-table-cell {
+  border: solid 1px white !important;
+}
+.ant-pagination {
+  background: black !important;
+}
